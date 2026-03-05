@@ -1,3 +1,16 @@
+# quick build
+
+1. `git apply nate.patch`
+  
+2. `bash new_docker_image_name.sh velox-adapters-build:lhvu velox-adapters-build:nhp` where `velox-adapters-build:nhp` is the new docker image you want to build and `velox-adapters-build:lhvu` is the default or existing docker image name
+
+3. `cd velox-testing/velox/scripts`
+  
+4. `./build_velox.sh --cpu --benchmarks true`
+
+5. `python -u generate_data_files.py -b tpch -d output_data -s 0.1 -c -j 32 -v`
+   
+----------------------------------
 # velox-testing
 This repository contains infrastructure for Velox, Presto, and Spark Gluten functional and benchmark testing. The scripts in this repository are intended to be usable by CI/CD systems, such as GitHub Actions, as well as usable for local development and testing.
 
