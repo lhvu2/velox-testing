@@ -1,7 +1,7 @@
 services:
   velox-adapters-build:
     container_name: velox-adapters-build
-    image: velox-adapters-build:latest
+    image: velox-adapters-build:lhvu
     build:
       context: ../../..
       dockerfile: velox-testing/velox/docker/adapters_build.dockerfile

@@ -1,7 +1,7 @@
 services:
   velox-benchmark:
     container_name: velox-benchmark
-    image: velox-adapters-build:latest
+    image: velox-adapters-build:lhvu
     # runtime: ${DOCKER_RUNTIME:-nvidia}
     environment:
       - USER_ID=${USER_ID}

@@ -202,7 +202,7 @@ check_velox_build() {
   echo "Checking Velox build..."
 
   # Check if velox-adapters-build image exists
-  if ! docker image inspect velox-adapters-build:latest &> /dev/null; then
+  if ! docker image inspect velox-adapters-build:lhvu &> /dev/null; then
     echo "ERROR: velox-adapters-build Docker image not found." >&2
     echo "Please build Velox first by running: ./build_velox.sh" >&2
     exit 1
