@@ -1,11 +1,13 @@
 ARG TARGETARCH
 
 # Install latest ninja
-FROM alpine:latest AS ninja-amd64
+# FROM alpine:latest AS ninja-amd64
+FROM public.ecr.aws/docker/library/alpine:latest AS ninja-amd64
 RUN apk add --no-cache unzip
 ADD https://github.com/ninja-build/ninja/releases/latest/download/ninja-linux.zip /tmp
 
-FROM alpine:latest AS ninja-arm64
+# FROM alpine:latest AS ninja-arm64
+FROM public.ecr.aws/docker/library/alpine:latest AS ninja-arm64
 RUN apk add --no-cache unzip
 ADD https://github.com/ninja-build/ninja/releases/latest/download/ninja-linux-aarch64.zip /tmp
 RUN mv /tmp/ninja-linux-aarch64.zip /tmp/ninja-linux.zip

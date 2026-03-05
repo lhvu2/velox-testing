@@ -1,0 +1,44 @@
+diff --git a/velox/docker/adapters_build.dockerfile b/velox/docker/adapters_build.dockerfile
+index a70385d..b1a2e86 100644
+--- a/velox/docker/adapters_build.dockerfile
++++ b/velox/docker/adapters_build.dockerfile
+@@ -1,11 +1,13 @@
+ ARG TARGETARCH
+
+ # Install latest ninja
+-FROM alpine:latest AS ninja-amd64
++# FROM alpine:latest AS ninja-amd64
++FROM public.ecr.aws/docker/library/alpine:latest AS ninja-amd64
+ RUN apk add --no-cache unzip
+ ADD https://github.com/ninja-build/ninja/releases/latest/download/ninja-linux.zip /tmp
+
+-FROM alpine:latest AS ninja-arm64
++# FROM alpine:latest AS ninja-arm64
++FROM public.ecr.aws/docker/library/alpine:latest AS ninja-arm64
+ RUN apk add --no-cache unzip
+ ADD https://github.com/ninja-build/ninja/releases/latest/download/ninja-linux-aarch64.zip /tmp
+ RUN mv /tmp/ninja-linux-aarch64.zip /tmp/ninja-linux.zip
+diff --git a/velox/docker/docker-compose.adapters.benchmark.yml b/velox/docker/docker-compose.adapters.benchmark.yml
+index 511cc1c..384c5a7 100644
+--- a/velox/docker/docker-compose.adapters.benchmark.yml
++++ b/velox/docker/docker-compose.adapters.benchmark.yml
+@@ -2,7 +2,7 @@ services:
+   velox-benchmark:
+     container_name: velox-benchmark
+     image: velox-adapters-build:latest
+-    runtime: ${DOCKER_RUNTIME:-nvidia}
++    # runtime: ${DOCKER_RUNTIME:-nvidia}
+     environment:
+       - USER_ID=${USER_ID}
+       - GROUP_ID=${GROUP_ID}
+diff --git a/velox/docker/sccache_auth.dockerfile b/velox/docker/sccache_auth.dockerfile
+index d6c3c09..b17311f 100644
+--- a/velox/docker/sccache_auth.dockerfile
++++ b/velox/docker/sccache_auth.dockerfile
+@@ -1,4 +1,5 @@
+-FROM ubuntu:22.04
++# FROM ubuntu:22.04
++FROM public.ecr.aws/ubuntu/ubuntu:22.04
+
+ # Prevent interactive prompts during package installation
+ ENV DEBIAN_FRONTEND=noninteractive
