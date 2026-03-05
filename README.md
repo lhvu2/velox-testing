@@ -1,10 +1,34 @@
 # quick build
 
+Assuming your folder structure is as follows:
+
+`cd $HOME/projects/velox-dev/velox-testing`
+
+You have:
+```
+.
+├── CONTRIBUTING.md
+├── LICENSE
+├── README.md
+├── benchmark_data_tools
+├── benchmark_reporting_tools
+├── ci
+├── common
+├── nate.patch
+├── new_docker_image_name.sh
+├── presto
+├── pyproject.toml
+├── scripts
+├── spark_gluten
+├── template_rendering
+└── velox
+```
+
 1. `git apply nate.patch`
   
 2. `bash new_docker_image_name.sh velox-adapters-build:lhvu velox-adapters-build:nhp` where `velox-adapters-build:nhp` is the new docker image you want to build and `velox-adapters-build:lhvu` is the default or existing docker image name
 
-3. `cd velox-testing/velox/scripts`
+3. `cd velox/scripts`
   
 4. `./build_velox.sh --cpu --benchmarks true`
 
