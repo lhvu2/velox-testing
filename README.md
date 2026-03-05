@@ -40,11 +40,11 @@ You have:
   
 where `velox-adapters-build:nhp` is the new docker image you want to build and `velox-adapters-build:lhvu` is the default or existing docker image name.
 
-5. `cd velox/scripts`
+3. `cd velox/scripts`
   
-6. `./build_velox.sh --cpu --benchmarks true`
+4. `./build_velox.sh --cpu --benchmarks true`
 
-7. `python -u generate_data_files.py -b tpch -d output_data -s 0.1 -c -j 32 -v`
+5. `python -u generate_data_files.py -b tpch -d output_data -s 0.1 -c -j 32 -v`
    
 ----------------------------------
 # velox-testing
