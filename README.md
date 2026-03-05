@@ -2,7 +2,17 @@
 
 Assuming your folder structure is as follows:
 
-`cd $HOME/projects/velox-dev/velox-testing`
+`cd $HOME/projects/velox-dev`
+
+You have:
+```
+.
+├── presto
+├── velox
+└── velox-testing
+```
+
+And: `cd $HOME/projects/velox-dev/velox-testing`
 
 You have:
 ```
