@@ -1,6 +1,6 @@
-# quick build
+# QUICK START
 
-Refer `QUICK_BUILD.md` for instructions on quick build and benchmark execution
+Refer `QUICK_START.md` for instructions on a building an image and executing the benchmark
 
 ------------------------------------ 
 # velox-testing
