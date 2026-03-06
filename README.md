@@ -1,6 +1,8 @@
 # quick build
 
+Refer `QUICK_BUILD.md` for instructions on quick build and benchmark execution
 
+------------------------------------ 
 # velox-testing
 This repository contains infrastructure for Velox, Presto, and Spark Gluten functional and benchmark testing. The scripts in this repository are intended to be usable by CI/CD systems, such as GitHub Actions, as well as usable for local development and testing.
 
