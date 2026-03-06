@@ -24,7 +24,7 @@ You have:
 ├── benchmark_reporting_tools
 ├── ci
 ├── common
-├── nate.patch
+├── build.patch
 ├── new_docker_image_name.sh
 ├── presto
 ├── pyproject.toml
@@ -34,7 +34,7 @@ You have:
 └── velox
 ```
 
-1. `git apply nate.patch`
+1. `git apply build.patch`
   
 2. `bash new_docker_image_name.sh velox-adapters-build:latest velox-adapters-build:lhvu`
   
