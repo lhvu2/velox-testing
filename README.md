@@ -44,7 +44,7 @@ where `velox-adapters-build:nhp` is the new docker image you want to build and `
   
 4. `./build_velox.sh --cpu --benchmarks true`
 
-5. `cd $HOME/projects/velox-dev/velox-testing/benchmark_data_tools/output_data`
+5. `cd $HOME/projects/velox-dev/velox-testing/benchmark_data_tools`
   
 7. `conda create -n py313 python=3.13 ; conda activate py313`
 
