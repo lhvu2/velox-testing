@@ -36,9 +36,9 @@ You have:
 
 1. `git apply nate.patch`
   
-2. `bash new_docker_image_name.sh velox-adapters-build:lhvu velox-adapters-build:nhp`
+2. `bash new_docker_image_name.sh velox-adapters-build:latest velox-adapters-build:lhvu`
   
-where `velox-adapters-build:nhp` is the new docker image you want to build and `velox-adapters-build:lhvu` is the default or existing docker image name.
+where `velox-adapters-build:lhvu` is the new docker image you want to build and `velox-adapters-build:latest` is the default or existing docker image name.
 
 3. `cd velox/scripts`
   
