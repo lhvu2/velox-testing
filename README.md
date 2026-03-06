@@ -52,7 +52,7 @@ where `velox-adapters-build:lhvu` is the new docker image you want to build and 
    
 10. `python -u generate_data_files.py -b tpch -d output_data -s 0.1 -c -j 32 -v`
 
-11. `cd $HOME/projects/velox-dev; mkdir -p velox-benchmark-data/tpch; mv $HOME/projects/velox-dev/velox-testing/benchmark_data_tools/output_data velox-benchmark-data/tpch/`
+11. `cd $HOME/projects/velox-dev; mkdir -p velox-benchmark-data/tpch; mv $HOME/projects/velox-dev/velox-testing/benchmark_data_tools/output_data/* velox-benchmark-data/tpch/`
 
 12. `cd $HOME/projects/velox-dev/velox-testing/velox/scripts; ./benchmark_velox.sh --queries 6 --device-type cpu`
 
