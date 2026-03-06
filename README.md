@@ -1,6 +1,6 @@
 # QUICK START
 
-Refer `QUICK_START.md` for instructions on a building an image and executing the benchmark
+Refer `QUICK_START.md` for instructions on building a new docker image and executing the benchmark.
 
 ------------------------------------ 
 # velox-testing
